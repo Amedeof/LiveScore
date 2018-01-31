@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.android.livescore.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="8dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:layout_weight="1"
+                android:text="Manchester City"
+                android:textStyle="bold"
+                android:textSize="12sp" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:layout_weight="1"
+                android:text="Chelsea"
+                android:textStyle="bold"
+                android:textSize="12sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="8dp"
+        android:paddingTop="16dp"
+        android:paddingRight="8dp"
+        android:paddingBottom="16dp">
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:paddingRight="30dp"
+            android:layout_weight="2"
+            android:background="@null"
+            android:src="@drawable/manchester"/>
+        <TextView
+            android:id="@+id/manCity_score"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="0"
+            android:textColor="#F44336"
+            android:textSize="50sp"/>
+        <TextView
+            android:id="@+id/chelsea_score"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textColor="#F44336"
+            android:textSize="50sp"
+            android:text="0" />
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_weight="2"
+            android:paddingLeft="30dp"
+            android:background="@null"
+            android:src="@drawable/chelsea" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:orientation="horizontal"
+        android:paddingLeft="125dp"
+        android:paddingRight="125dp"
+        android:paddingBottom="4dp"
+        android:background="@color/colorAccent">
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/yellowcard" />
+
+        <TextView
+            android:id="@+id/manCity_yellowCard"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="0"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/chelsea_yellowCard"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="0"
+            android:textSize="15sp" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/yellowcard" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:orientation="horizontal"
+        android:paddingLeft="125dp"
+        android:paddingRight="125dp"
+        android:paddingBottom="4dp"
+        android:background="@color/colorAccent">
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/redcard" />
+
+        <TextView
+            android:id="@+id/manCity_redCard"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="0"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/chelsea_redCard"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="0"
+            android:textSize="15sp" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/redcard" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="36dp"
+        android:background="@color/colorAccent">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <Button
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:onClick="oneGoalManCity"
+                android:layout_marginBottom="10dp"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif-condensed"
+                android:text="Goal"/>
+
+            <Button
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:onClick="oneYellowManCity"
+                android:layout_marginBottom="10dp"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif-condensed"
+                android:text="Yellow Card" />
+
+            <Button
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif-condensed"
+                android:onClick="oneRedManCity"
+                android:text="Red Card" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <Button
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="sans-serif-condensed"
+                android:onClick="oneGoalChelsea"
+                android:text="Goal"
+                />
+
+            <Button
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/white"
+                android:layout_marginBottom="10dp"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif-condensed"
+                android:onClick="oneYellowChelsea"
+                android:text="Yellow Card" />
+
+            <Button
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif-condensed"
+                android:onClick="oneRedChelsea"
+                android:text="Red Card"
+
+            />
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorAccent">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="8dp"
+            android:onClick="resetAll"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-condensed"
+            android:text="new game"
+            android:textAllCaps="true" />
+    </RelativeLayout>
+
+</LinearLayout>
